@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Epicode_S3_L2_BackEnd.Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Epicode_S3_L2_BackEnd.Login" %>
 
 <!DOCTYPE html>
 
@@ -7,10 +7,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/Body.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" class="d-flex flex-column align-items-center" runat="server">
-        <h1 class="mb-3">Epicode Multisala Login</h1>
+        <h1 class="mb-3 mt-3">Epicode Multisala Login</h1>
+        <asp:Image ID="Image1" runat="server" ImageUrl="~/Content/imgs/login.png" Width="200px" CssClass="mb-3"/>
         <div class="w-25">
             <div class="row mb-3 d-flex justify-content-center">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
