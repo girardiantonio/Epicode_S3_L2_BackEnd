@@ -40,22 +40,24 @@
             </div>
 
             <div class="col-auto mb-3">
-                <label class="visually-hidden" for="autoSizingSelect">Preference</label>
-                <select class="form-select" id="autoSizingSelect">
-                    <option selected>Scegli la sala...</option>
-                    <option value="1">SALA NORD</option>
-                    <option value="2">SALA EST</option>
-                    <option value="3">SALA SUD</option>
-                </select>
+                <label class="visually-hidden" for="select">Scegli la sala...</label>
+                <asp:DropDownList ID="autoSizingSelect" runat="server" CssClass="form-select">
+                    <asp:ListItem Text="Scegli la sala..." Value="autoSizingSelect" />
+                    <asp:ListItem Text="SALA NORD" Value="1" />
+                    <asp:ListItem Text="SALA SUD" Value="2" />
+                    <asp:ListItem Text="SALA EST" Value="3" />
+                </asp:DropDownList>
             </div>
+
             <div class="col-auto mb-3">
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="autoSizingCheck" />
+                    <asp:CheckBox ID="autoSizingCheck" runat="server" CssClass="form-check-input" />
                     <label class="form-check-label" for="autoSizingCheck">
                         Ridotto
                     </label>
                 </div>
             </div>
+
             <div class="col-auto d-flex justify-content-center mb-3">
                 <asp:Button ID="Button1" class="btn btn-primary" runat="server" Text="Prenota" OnClick="Button1_Click" />
             </div>
@@ -64,13 +66,13 @@
         <div class="container mt-5 border border-dark rounded d-flex flex-column justify-content-around align-items-center" style="width: 50em; height: 10em;">
             <h3>Informazioni utenti</h3>
             <div class="d-flex justify-content-center align-items-center border border-dark rounded" style="width: 30em; height: 2em;">
-                <asp:Label ID="Label7" runat="server" Text="Biglietti venduti SALA NORD: {0}, "></asp:Label><asp:Label ID="Label8" runat="server" Text="di cui ridotti: {0}"></asp:Label>
+                <asp:Label ID="Label1" runat="server" Text="Biglietti venduti SALA NORD: 0, di cui ridotti: 0"></asp:Label>
             </div>
             <div class="d-flex justify-content-center align-items-center border border-dark rounded" style="width: 30em; height: 2em;">
-                <asp:Label ID="Label1" runat="server" Text="Biglietti venduti SALA NORD: {0}, "></asp:Label><asp:Label ID="Label2" runat="server" Text="di cui ridotti: {0}"></asp:Label>
+                <asp:Label ID="Label2" runat="server" Text="Biglietti venduti SALA SUD: 0, di cui ridotti: 0"></asp:Label>
             </div>
             <div class="d-flex justify-content-center align-items-center border border-dark rounded" style="width: 30em; height: 2em;">
-                <asp:Label ID="Label3" runat="server" Text="Biglietti venduti SALA NORD: {0}, "></asp:Label><asp:Label ID="Label4" runat="server" Text="di cui ridotti: {0}"></asp:Label>
+                <asp:Label ID="Label3" runat="server" Text="Biglietti venduti SALA EST: 0, di cui ridotti: 0"></asp:Label>
             </div>
         </div>
     </form>
