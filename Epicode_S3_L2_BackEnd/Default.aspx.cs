@@ -12,14 +12,7 @@ namespace Epicode_S3_L2_BackEnd
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.Cookies["user"] == null)
-            {
 
-            }
-            else
-            {
-                Response.Redirect("Gestione.aspx");
-            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
